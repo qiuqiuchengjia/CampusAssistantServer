@@ -2,6 +2,7 @@
 include("connection.php");
 /**
 这个是注册提交用户信息到服务器
+ * 这个是我的服务器第二次测试提交
  */
 $_key = $_POST["KEY"];
 $_username= $_POST["register_to_submit_username"];//用户名
