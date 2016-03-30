@@ -1,0 +1,82 @@
+动态：
+  CREATE TABLE `dongtai` (
+ `id` int(100) NOT NULL AUTO_INCREMENT,
+ `touxiang` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `name` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `school` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `date` date NOT NULL,
+ `content` text CHARACTER SET utf8 NOT NULL,
+ `picture` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `zan` int(100) NOT NULL,
+ `pinglun` int(100) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+
+
+评论：
+	CREATE TABLE `pinglun` (
+ `id` int(100) NOT NULL AUTO_INCREMENT,
+ `content` text CHARACTER SET utf8 NOT NULL,
+ `date` date NOT NULL,
+ `dongtaiid` int(100) NOT NULL,
+ `userid` int(100) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+
+课表：
+
+CREATE TABLE `userkebiao` (
+ `id` int(15) NOT NULL AUTO_INCREMENT,
+ `token` varchar(40) CHARACTER SET utf8 NOT NULL,
+ `name` text CHARACTER SET utf8 NOT NULL,
+ `credit` text CHARACTER SET utf8 NOT NULL,
+ `period` text CHARACTER SET utf8 NOT NULL,
+ `teachPeriod` text CHARACTER SET utf8 NOT NULL,
+ `computerPeriod` text CHARACTER SET utf8 NOT NULL,
+ `teachWay` text CHARACTER SET utf8 NOT NULL,
+ `checkStudent` text CHARACTER SET utf8 NOT NULL,
+ `teacher` text CHARACTER SET utf8 NOT NULL,
+ `week` text CHARACTER SET utf8 NOT NULL,
+ `classTime` text CHARACTER SET ucs2 NOT NULL,
+ `place` text CHARACTER SET utf8 NOT NULL,
+ `serialNumber` text CHARACTER SET utf8 NOT NULL,
+ `dayOfWeek` text CHARACTER SET utf8 NOT NULL,
+ `classes` text CHARACTER SET utf8 NOT NULL,
+ `startWeek` int(2) NOT NULL,
+ `schoolYear` varchar(9) CHARACTER SET utf8 NOT NULL,
+ `semester` varchar(2) CHARACTER SET utf8 NOT NULL,
+ PRIMARY KEY (`token`),
+ UNIQUE KEY `token` (`id`),
+ UNIQUE KEY `token_2` (`id`),
+ UNIQUE KEY `token_3` (`id`),
+ KEY `token_4` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+
+用户：
+
+CREATE TABLE `users` (
+ `id` int(15) NOT NULL AUTO_INCREMENT,
+ `username` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `password` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `school` varchar(200) CHARACTER SET utf8 NOT NULL,
+ `token` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `touxiang` varchar(100) CHARACTER SET utf8 NOT NULL,
+ `starttime` varchar(4) CHARACTER SET utf8 NOT NULL,
+ `banji` varchar(1000) CHARACTER SET utf8 NOT NULL,
+ `sex` int(1) NOT NULL,
+ `phonenumber` varchar(11) COLLATE utf8_bin NOT NULL,
+ `college` varchar(50) CHARACTER SET utf8 NOT NULL,
+ `age` int(3) NOT NULL,
+ `email` varchar(20) CHARACTER SET utf8 NOT NULL,
+ `city` varchar(30) CHARACTER SET utf8 NOT NULL,
+ `activetime` int(100) NOT NULL,
+ `name` varchar(10) CHARACTER SET utf8 NOT NULL,
+ `nickname` varchar(10) CHARACTER SET utf8 NOT NULL,
+ `province` varchar(50) CHARACTER SET utf8 NOT NULL,
+ `career` varchar(50) CHARACTER SET utf8 NOT NULL,
+ `studentnumber` varchar(15) CHARACTER SET utf8 NOT NULL,
+ `studentnumberpassword` varchar(20) CHARACTER SET utf8 NOT NULL,
+ PRIMARY KEY (`username`),
+ UNIQUE KEY `id` (`id`),
+ UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
