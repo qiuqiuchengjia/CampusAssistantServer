@@ -6,7 +6,7 @@ include("connection.php");
  */
 $_key = $_POST["KEY"];
 $_username= $_POST["register_to_submit_username"];//用户名
-$_password_md5= $_POST["register_to_submit_password_md5"];//密码
+$_password_md5= $_POST["register_to_submit_password_md5"];//密码   测试一下
 $_school= $_POST["register_to_submit_school"];//学校
 $_college= $_POST["register_to_submit_college"];//学院
 $_career= $_POST["register_to_submit_career"];//专业
